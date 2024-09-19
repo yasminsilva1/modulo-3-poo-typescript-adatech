@@ -9,14 +9,18 @@ export class Musica {
 		this._duracao = duracao;
 	}
 
+	reproduzir(): void {
+		console.log(`Reproduzindo "${this._titulo}" - ${this._artista}.`);
+	}
+
 	pausar(): void {
-		console.log(`"${this._titulo}" - ${this._artista} foi pausada.`);
+		console.log(`"${this._titulo}" foi pausada.`);
 	}
 
 	obterDuracaoEmMinutos(): string {
 		let minutos = Math.floor(this._duracao / 60);
 		let segundos = this._duracao % 60;
 		let segundosFormatado = segundos < 10 ? `0${segundos}` : segundos;
-		return `A música "${this._titulo}" tem ${minutos}:${segundosFormatado}min de duração.`;
+		return `A música "${this._titulo}" - ${this._artista} tem ${minutos}:${segundosFormatado}min de duração.`;
 	}
 }

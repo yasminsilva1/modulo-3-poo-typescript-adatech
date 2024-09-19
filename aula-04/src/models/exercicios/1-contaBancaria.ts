@@ -38,8 +38,8 @@ export class Conta_Bancaria {
 		}
 	}
 
-	consultarSaldo(): string {
-		return `Saldo atual: R$${this._saldo.toFixed(2).replace(".", ",")}`;
+	consultarSaldo(): number {
+		return this._saldo;
 	}
 
 	obterNumeroConta(): string {

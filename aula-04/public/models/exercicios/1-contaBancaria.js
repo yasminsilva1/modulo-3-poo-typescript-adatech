@@ -37,7 +37,7 @@ class Conta_Bancaria {
         }
     }
     consultarSaldo() {
-        return `Saldo atual: R$${this._saldo.toFixed(2).replace(".", ",")}`;
+        return this._saldo;
     }
     obterNumeroConta() {
         return `Número da conta: ${this._numeroConta}`;

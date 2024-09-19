@@ -35,13 +35,13 @@ produto1.baixarEstoque(2);
 produto1.baixarEstoque(10);
 produto1.baixarEstoque(-2);
 produto1.baixarEstoque(8);
-produto1.reporEstoque(58);
+produto1.reporEstoque(20);
 produto1.reporEstoque(0);
 produto1.reporEstoque(-5);
 console.log(produto1.calcularValorTotal());
 produto1.exibirResumo();
 
-const musica1 = new Musica("Burning Down The House", "Paramore", 218);
-
+const musica1 = new Musica("You First", "Paramore", 245);
+musica1.reproduzir();
 musica1.pausar();
 console.log(musica1.obterDuracaoEmMinutos());
