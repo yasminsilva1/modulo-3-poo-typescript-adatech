@@ -2,7 +2,7 @@ import { Animal } from "./models/animal";
 import { Carros } from "./models/carros";
 import { Pessoa } from "./models/pessoa";
 import { Biblioteca } from "./models/exercicios/1-biblioteca";
-import { Prato } from "./models/exercicios/2-prato";
+import { Pedido } from "./models/exercicios/2-prato";
 
 const meuCarro = new Carros();
 meuCarro.marca = "GM";
@@ -46,14 +46,15 @@ livro1.consultaDisponibilidade();
 livro1.renovarEmprestimo();
 livro1.removerLivro();
 
-const prato1 = new Prato();
-prato1.definirPrato("Omelete", 15);
-prato1.definirGarcom("João", 1234);
-prato1.definirDetalhesPedido(3, 2);
-prato1.exibirPedido();
+const prato1 = new Pedido();
 prato1.pratoNome = "Omelete";
 prato1.pratoPreco = 15;
 prato1.garcomNome = "João";
 prato1.garcomMatricula = 1234;
 prato1.mesa = 3;
 prato1.quantidade = 2;
+
+prato1.definirPrato();
+prato1.definirGarcom();
+prato1.definirDetalhesPedido();
+prato1.exibirPedido();

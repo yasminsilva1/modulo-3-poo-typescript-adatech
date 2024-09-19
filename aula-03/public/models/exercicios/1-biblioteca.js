@@ -1,9 +1,4 @@
 "use strict";
-/* 1) Crie um sistema básico de biblioteca com atributos abaixo :
-titulo, autor, categoria, numero de paginas, disponivel, ativo;
-E tenha como comportamentos:
-exibirDetalhes, emprestaLivro, consultaDisponibilidade, removerLivro, renovarEmprestimo
-*/
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Biblioteca = void 0;
 class Biblioteca {

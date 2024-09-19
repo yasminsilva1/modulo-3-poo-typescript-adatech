@@ -1,22 +1,7 @@
 "use strict";
-/* 2) Criar uma classe pedido com as seguintes informações:
-Atributos Públicos:
-+ pratoNome: Nome do prato.
-+ pratoPreco: Preço do prato.
-+ garcomNome: Nome do garçom.
-+ garcomMatricula: Matrícula do garçom.
-+ mesa: Número da mesa onde o pedido foi feito.
-+ quantidade: Quantidade de pratos pedidos.
-
-Métodos:
-definirPrato: Define o nome e o preço do prato.
-definirGarcom: Define o nome e a matrícula do garçom.
-definirDetalhesPedido: Define o número da mesa e a quantidade de pratos.
-exibirPedido: Exibe todos os detalhes do pedido, incluindo o total calculado.
-*/
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Prato = void 0;
-class Prato {
+exports.Pedido = void 0;
+class Pedido {
     constructor() {
         this.pratoNome = "";
         this.pratoPreco = 0;
@@ -25,29 +10,43 @@ class Prato {
         this.mesa = 0;
         this.quantidade = 0;
     }
-    definirPrato(pratoNome, pratoPreco) {
-        this.pratoNome = pratoNome;
-        this.pratoPreco = pratoPreco;
+    definirPrato() {
+        if (!this.pratoNome && !this.pratoPreco) {
+            console.log("Você precisa informar o nome do prato e o seu preço.");
+        }
+        else {
+            console.log(`Nome do prato: ${this.pratoNome}, Preço: R$${this.pratoPreco
+                .toFixed(2)
+                .replace(".", ",")}.`);
+        }
     }
-    definirGarcom(garcomNome, garcomMatricula) {
-        this.garcomNome = garcomNome;
-        this.garcomMatricula = garcomMatricula;
+    definirGarcom() {
+        if (!this.garcomNome && !this.garcomMatricula) {
+            console.log("Você precisa informar o nome do garçom e a seu matrícula.");
+        }
+        else {
+            console.log(`Nome do garçom: ${this.garcomNome}, Matrícula: ${this.garcomMatricula}.`);
+        }
     }
-    definirDetalhesPedido(mesa, quantidade) {
-        this.mesa = mesa;
-        this.quantidade = quantidade;
+    definirDetalhesPedido() {
+        if (!this.mesa && !this.quantidade) {
+            console.log("Você precisa informar o número da mesa e a quantidade de pratos.");
+        }
+        else {
+            console.log(`Número da mesa: ${this.mesa}, Quantidade de pratos: ${this.quantidade}.`);
+        }
     }
     exibirPedido() {
         const total = this.pratoPreco * this.quantidade;
         console.log(`
 Detalhes do pedido:
 Prato: ${this.pratoNome}
-Preço: R$${this.pratoPreco.toFixed(2)}
-Quantidade: ${this.quantidade}
-Garçom: ${this.garcomNome} (Matrícula: ${this.garcomMatricula})
-Mesa: ${this.mesa}
-Total do pedido: R$${total.toFixed(2)}
+Preço: R$${this.pratoPreco.toFixed(2).replace(".", ",")}
+Quantidade de pratos: ${this.quantidade}
+Nome do garçom: ${this.garcomNome} (Matrícula: ${this.garcomMatricula})
+Número da mesa: ${this.mesa}
+Valor total do pedido: R$${total.toFixed(2)}
 		`);
     }
 }
-exports.Prato = Prato;
+exports.Pedido = Pedido;

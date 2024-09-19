@@ -1,9 +1,3 @@
-/* 1) Crie um sistema básico de biblioteca com atributos abaixo :
-titulo, autor, categoria, numero de paginas, disponivel, ativo;
-E tenha como comportamentos:
-exibirDetalhes, emprestaLivro, consultaDisponibilidade, removerLivro, renovarEmprestimo
-*/
-
 export class Biblioteca {
 	public titulo: string = "";
 	public autor: string = "";
