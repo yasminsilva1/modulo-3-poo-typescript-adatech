@@ -1,1 +1,5 @@
 node_modules/
+
+aula-03/public/**/*.js
+aula-04/public/**/*.js
+aula-05/public/**/*.js
